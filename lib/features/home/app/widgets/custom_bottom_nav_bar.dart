@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:iconify_flutter/iconify_flutter.dart';
 
 class CustomBottomNavBar extends StatefulWidget {
   const CustomBottomNavBar({super.key});
@@ -53,12 +55,9 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
               ),
               label: 'Home',
             ),
-            BottomNavigationBarItem(
-              icon: SvgPicture.asset(
-                'lib/images/frame 7261.svg',
-                width: 20,
-                height: 20,
-
+            const BottomNavigationBarItem(
+              icon: FaIcon(
+                FontAwesomeIcons.building
               ),
               label: 'Projects',
             ),

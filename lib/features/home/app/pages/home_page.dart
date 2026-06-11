@@ -2,11 +2,14 @@ import 'package:aidi_app/features/home/app/pages/prospect_inspector.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:iconify_flutter/iconify_flutter.dart';
+import 'package:iconify_flutter/icons/iconoir.dart';
 
 import '../../../../core/utils/app_colors.dart';
 import '../widgets/active_projects.dart';
 import '../widgets/continue_payment.dart';
 import '../widgets/custom_bottom_nav_bar.dart';
+import '../widgets/project_contractor.dart';
 import '../widgets/story_card.dart';
 import 'notification.dart' as custom_notification;
 
@@ -70,11 +73,8 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.grey[200],
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: SvgPicture.asset(
-                    'lib/images/Group 8.svg',
-                    width: 20,
-                    height: 20,
-
+                  child: const Iconify(
+                    Iconoir.bell_notification,
                   ),
               ),
             ),
@@ -309,6 +309,14 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
+                  const Padding(
+                    padding:  EdgeInsets.symmetric(vertical: 0,horizontal: 10),
+                    child:  Column(
+                      children: [
+                        ProjectContractor()
+                      ],
+                    ),
+                  ),
 
                   Padding(
                     padding: const EdgeInsets.all(12),
@@ -325,16 +333,15 @@ class _HomePageState extends State<HomePage> {
                             color: AppColors.primaryGreen,
                             borderRadius: BorderRadius.circular(12),
                           ),
-                          child: SvgPicture.asset(
-                            'lib/images/donate.svg',
-                            width: 20,
-                            height: 20,
-
+                          child: const Iconify(
+                            'streamline-flex-color:blood-donate-drop',
+                            size: 24,
                           ),
+                          )
                         ),
                       ),
                     ),
-                  )
+
                 ],
               )
           )

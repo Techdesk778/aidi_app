@@ -19,7 +19,7 @@ class _StoryCardState extends State<StoryCard> {
           width: double.infinity,
           margin: const EdgeInsets.all(16),
           decoration: BoxDecoration(
-            color: AppColors.altSmokeWhite,
+            color: AppColors.pureWhite,
             borderRadius: BorderRadius.circular(16),
           ),
           child: ClipRRect(

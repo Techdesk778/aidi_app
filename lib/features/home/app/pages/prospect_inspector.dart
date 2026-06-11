@@ -3,6 +3,7 @@ import 'package:aidi_app/features/home/app/pages/application_successful.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:iconify_flutter/iconify_flutter.dart';
 
 
 import '../widgets/how_to_verify.dart';
@@ -51,9 +52,8 @@ class _ProspectInspectorState extends State<ProspectInspector> {
                       ),
                     ),
                     child: Center(
-                      child: SvgPicture.asset(
-                          'lib/images/engineering.svg',
-
+                      child: Iconify(
+                          'fluent-mdl2:engineering-group'
                       )
                     ),
                   ),

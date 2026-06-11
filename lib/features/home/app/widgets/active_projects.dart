@@ -15,7 +15,7 @@ class ActiveProjects extends StatelessWidget {
           width: double.infinity,
           margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           decoration: BoxDecoration(
-            color: AppColors.smokeWhite,
+            color: AppColors.pureWhite,
             borderRadius: BorderRadius.circular(16),
           ),
           child: ClipRRect(

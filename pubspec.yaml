@@ -67,6 +67,7 @@ dependencies:
   internet_connection_checker: ^3.0.1
   fluentui_system_icons: ^1.1.273
   fluent_ui: ^1.2.3
+  flutter_iconify: ^1.2.6
 
 dev_dependencies:
   flutter_test:
