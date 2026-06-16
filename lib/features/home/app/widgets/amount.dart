@@ -2,15 +2,27 @@ import 'package:aidi_app/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class Amount extends StatefulWidget {
-  const Amount({super.key});
+
+  final Function(String) onAmountSelected;
+
+  const Amount({
+    super.key,
+    required this.onAmountSelected,
+  });
 
   @override
   State<Amount> createState() => _AmountState();
 }
 
 class _AmountState extends State<Amount> {
-  int selectedIndex = 0;
+
+  int selectedIndex = -1;
+
+
   final List<String> amounts = ['₦5k', '₦10k', '₦50k'];
+
+
+  final List<String> rawValues = ['5000', '10000', '50000'];
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +39,9 @@ class _AmountState extends State<Amount> {
               setState(() {
                 selectedIndex = index;
               });
+
+
+              widget.onAmountSelected(rawValues[index]);
             },
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 20),
